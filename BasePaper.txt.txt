@@ -1,0 +1,228 @@
+Title:- Automatic Timetable Generator 
+Using AI (Timely). 
+ 
+Authors:- 
+¹ Miss. A. R. Ghongade.
+² Harshal Shamshettiwar.
+³ Komal Thakre.
+⁴ Akanksha Vanjari.
+⁵ Shrutika Zade.
+
+Department:- 
+¹ Assistant professor Shri Shankarprasad Agnihotri College of Engineering , Wardha , Maharashtra ,  India-442001.
+
+²⁻⁵Department of Computer Science & Engineering.
+Shri Shankarprasad Agnihotri College of Engineering Wardha, Maharashtra, India -442001.
+  
+Emails:
+¹ ashmita2108@gmail.com
+² hshamshettiwar@gmail.com
+³ thakarekomal467@gmail.com
+⁴ akanksha4wanjari@gmail.com
+⁵ shrutikazade2003@gmail.com
+ 
+1.Abstract:-
+Timetable generation in higher educational institutions is a constraint-heavy and repetitive process. Traditional spreadsheet-based methods are time-consuming, error-prone, and difficult to scale. This paper presents “Timely”, an AI-driven automatic timetable generation system designed as a native Android application. The system leverages a Flask-based backend with Supabase integration and incorporates an intelligent AI model to generate optimized weekly timetables under real institutional constraints. The application supports professor-level management, student-level timetable viewing, and real-time notifications through Firebase Cloud Messaging. 
+Unlike conventional rule-based or algorithm-intensive approaches such as Genetic Algorithms or Constraint Satisfaction models, the proposed solution adopts a fine-tuned AI strategy tailored to domain-specific academic requirements. The modular architecture ensures scalability, maintainability, and real-world usability across departments.  
+Furthermore, the system is designed to efficiently manage faculty workload distribution, subject allocation, and batch-wise practical scheduling without manual intervention. The AI engine evaluates multiple constraint combinations to produce balanced and conflict-free weekly timetables while maintaining academic structure and institutional policies. The application also allows controlled editing and publishing of schedules, ensuring flexibility in case of changes or rescheduling. By integrating mobile technology, cloud-based data management, and intelligent automation, the proposed solution significantly reduces administrative effort and enhances scheduling accuracy. The system demonstrates a practical and reliable approach toward modernizing academic timetable management through AI-driven optimization and structured system design. 
+ 
+ 
+Keywords:- 
+Artificial Intelligence (AI), Automatic Timetable Generator, Academic Scheduling, Constraint 
+Satisfaction, Android Application, Flask Backend, Supabase, Firebase Cloud Messaging (FCM), Lecture-Tutorial-Practical (LTP), Role-Based Authentication, Educational Technology, AI-Based Optimization. 
+ 
+ 
+ 
+2.Introduction:- 
+In academic institutions, especially engineering colleges, generating weekly timetables for different departments and semesters is a repetitive and complex administrative task. It involves coordinating multiple subjects, faculty members, lecture types (Lecture-Tutorial - Practical), student batches, and fixed time slots while satisfying numerous constraints. Traditionally, this process is either manually handled or semi-automated using spreadsheets or basic scheduling tools — both prone to inefficiencies and errors. 
+To address this problem, our team developed “Timely”, a smart, AI-powered mobile application that fully automates timetable generation. It eliminates the need for manual design, ensuring optimal scheduling by applying college-specific constraints. The application enables professors to generate or edit timetables and send real-time updates, while students can view their personalized timetables and receive automatic lecture reminders. Unlike many cross-platform solutions, Timely is a native Android application built using Kotlin and Jetpack Compose, ensuring optimal performance and modern UI design. The backend is developed using Flask (Python), integrated with Supabase for authentication and storage, and uses Firebase Cloud Messaging (FCM) for push notifications. 
+Most importantly, “Timely” uses an AI-based approach, fine-tuned to adhere to institutional constraints, which makes it more practical and intelligent than traditional methods like Genetic Algorithms or Constraint Satisfaction Problems (CSPs), which were found to be either too rigid or computationally inefficient. 
+ 
+3. Literature Review:-
+Traditional timetable generation techniques include:
+Genetic Algorithms (GA):-
+Evolution-based optimization but computationally expensive for large datasets.
+Constraint Satisfaction Problems (CSPs):-
+Rule-based solving mechanism but rigid and difficult to modify dynamically.
+Heuristic Scheduling Methods:-
+Faster but may fail under complex constraints.
+These methods often require extensive parameter tuning and may not adapt easily to institution-specific requirements.
+The proposed AI-based approach differs by learning patterns from real institutional data and applying contextual intelligence rather than relying purely on static rules.
+
+4.Perspective Application:- 
+The proposed system, “Timely”, has strong potential for real-world implementation in academic institutions where timetable creation remains a challenging and time-consuming task. From a practical perspective, the application can be directly deployed in engineering colleges and universities to simplify and automate the entire scheduling process. Since the system is designed as a native Android application with a structured backend and AI-assisted scheduling engine, it is capable of handling real institutional data and constraints efficiently. One of the most important applications of the system is in reducing the manual workload of academic coordinators and faculty members. Traditionally, timetable preparation requires repeated adjustments to avoid conflicts between subjects, professors, and batches. With Timely, this process becomes automated, and a complete timetable can be generated within seconds. This allows faculty members to focus more on teaching and academic planning rather than administrative scheduling tasks. 
+
+The system is also highly beneficial for students. Through the mobile application, students can access their personalized timetables anytime and receive real-time notifications about upcoming lectures, timetable changes, or cancellations. This improves communication between the institution and students and ensures that students remain informed about their academic schedule without confusion. 
+
+Another important application lies in institutional scalability. The modular architecture of the system allows it to be extended to support multiple departments, courses, and academic years. Institutions with large student populations can use the system to manage complex scheduling requirements without increasing administrative complexity. Additionally, the role-based access ensures secure and organized management of timetable data. 
+From a technological perspective, the system demonstrates how artificial intelligence can be applied in educational management systems to improve efficiency and decision-making. It provides a practical example of integrating AI with mobile applications, backend services, and cloud-based databases to solve real-world problems. Furthermore, the system offers flexibility for timetable updates and modifications based on institutional needs. The use of cloud-based storage ensures secure and reliable access to timetable information for both faculty and students. This demonstrates that the proposed system is a practical, scalable, and efficient solution for modern academic timetable management. 
+ 
+5. Methodology:- 
+1.Requirement Analysis:- 
+Institutional constraints such as no faculty overlap, proper LTP distribution, and fixed time slots were identified. 
+ 
+2.Data Structuring:- 
+Subjects, professor mappings, batches, and time slots were organized and stored in a PostgreSQL database. 
+ 
+3. User Authentication & Role Management :- 
+Users log in through the Android application using secure authentication. 
+The system verifies credentials via Supabase Authentication. 
+Based on the assigned role (Professor or Student), users are redirected to their respective dashboards. 
+ 
+ 
+Screenshot 1: Student Login:-     
+ 
+ 
+  
+
+ 
+ 
+
+
+
+Screenshot 2: Professor login:- 
+ 
+ 
+  
+ 
+ 
+4.Backend Development:- 
+A Flask-based REST API was developed to manage authentication, timetable processing, and data handling. 
+ 
+5.AI-Based Timetable Generation:- 
+The AI model processes LTP input along with defined constraints to generate a weekly timetable. 
+ 
+6.Constraint Validation:- 
+The generated timetable is validated to ensure no conflicts, no subject repetition, and proper batch allocation. 
+ 
+7.Frontend Integration:- 
+The finalized timetable is displayed in the Android application, where professors can edit if required. 
+ 
+8.Notification System:- 
+Firebase Cloud Messaging is used to send lecture reminders and schedule updates. 
+ 
+ 
+ 
+6.System Architecture:- 
+ 
+The system follows a modular three-layer architecture:- 
+ 
+6.1. Frontend Layer (Android Application):- ` 
+Developed using Kotlin + Jetpack Compose.
+ Role-based authentication:  
+ i.Professor.
+   ii.Student. 
+Features: 
+  i.LTP data input. 
+  ii.Timetable generation. 
+Editing & rescheduling. 
+ i.Personalized timetable view. 
+ ii.Lecture reminders. 
+ 
+6.2. Backend Layer (Flask API):- 
+ 
+Developed using Flask (Python). 
+RESTful API structure. 
+Integration with: 
+Supabase Authentication. 
+PostgreSQL Database. 
+ 
+Responsibilities: 
+User management. 
+Constraint validation. 
+AI model communication. 
+Data storage & retrieval. 
+ 
+6.3. AI Timetable Engine:- 
+ 
+The AI engine processes:- LTP Structure. 
+Professor-subject mapping. 
+Institutional constraints. 
+It ensures: 
+No overlapping sessions. 
+Batch-wise practical distribution. 
+No duplicate lectures per day. 
+Fixed recess/seminar slots. 
+Balanced weekly subject distribution. 
+The model is fine-tuned using real academic data for practical feasibility. 
+ 
+6.4. Notification Module:- 
+ 
+Uses Firebase Cloud Messaging (FCM) .Sends: 
+Lecture reminders (5 minutes prior) 
+Cancellation alerts 
+Rescheduling updates 
+Secure token management via backend. 
+ 
+ 
+ 
+6.5. System Workflow:- 
+ 
+Step 1: Login 
+User logs in using role-based authentication. 
+Step 2: Data Input 
+Professor enters LTP data and subject mapping. 
+Step 3: AI Processing 
+Backend validates constraints and sends structured input to AI engine. 
+Step 4: Timetable Generation 
+AI generates optimized weekly schedule. 
+Step 5: Review & Edit 
+Professor can manually adjust if required.
+Step 6: Publish: Timetable is published and students receive notifications.  
+ 
+ 
+      
+ 
+ 
+                            Figure 1:- Overall Application Architecture Diagram 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 7.Flowchart :- 
+               
+8. Conclusion:- 
+The proposed AI-powered system “Timely” presents a modern, intelligent, and scalable solution to the longstanding problem of academic timetable generation. By integrating AI-based constraint satisfaction with a structured backend and native Android frontend, the system minimizes manual effort while maximizing accuracy and flexibility. 
+The modular design ensures adaptability across departments and institutions, making it a practical and future-ready academic scheduling solution. 
+     
+9.Future Scope:- 
+First Year Timetable Generation:- 
+Currently, the system successfully generates timetables for Second Year, Third Year, and Fourth Year students. 
+In future, the system will be extended to support First Year timetable generation with proper subject allocation and scheduling logic. 
+ 
+ 
+10.Challenges:- 
+During the development and implementation of the “Timely” system, several challenges were encountered. 
+One of the primary challenges was handling multiple institutional constraints simultaneously, such as faculty availability, LTP distribution, batch allocation, and fixed time slots. Ensuring that the AI model generates a timetable without violating these constraints required careful data structuring and validation. 
+Another challenge was managing faculty overlap, especially when a professor teaches multiple subjects across different semesters. In such cases, generating a fully conflict-free timetable becomes difficult when available time slots are limited. 
+Integration between the Android frontend, Flask backend, and Supabase database was also challenging. Ensuring smooth communication, secure authentication, and proper data synchronization required careful API design and testing. 
+Additionally, designing the system to be flexible and scalable for real institutional use was a challenge. The system needed to support timetable updates, editing, and rescheduling without affecting existing data. 
+Finally, training and fine-tuning the AI model to follow real academic scheduling patterns required proper input data and continuous testing to improve timetable quality and reliability. 
+ 
+
+
+
+
+
+
+
+
+11.Refernces:-
+[1] M. A. Khan, et al., “Automated timetable generation using genetic algorithm,” Procedia Computer Science, vol. 32, pp. 574–579, 2014.
+[2] Y. Patil and S. Ambekar, “Automatic timetable generation using genetic algorithm,” International Journal of Innovative Research in Computer and Communication Engineering, vol. 3, no. 1, pp. 525–530, 2015.
+[3] I. Hussain, et al., “An efficient algorithm for automatic class scheduling problem,” Egyptian Informatics Journal, vol. 17, no. 1, pp. 35–43, 2016.
+[4] M. Adeel, et al., “University course timetable scheduling using a hybrid metaheuristic algorithm,” Cluster Computing, vol. 22, no. 5, pp. 11019–11030, 2019.
+[5] A. Chandra, et al., “Automatic timetable generator using artificial intelligence,” International Research Journal of Engineering and Technology (IRJET), vol. 7, no. 3, pp. 1708–1711, 2020.
+[6] V. Vani and S. Saravanan, “A review on automatic timetable generation system,” International Journal of Computer Applications, 2013.
+[7] S. K. Panda, et al., “Automated timetable generation using constraint satisfaction problem,” International Journal of Engineering Research and Applications, vol. 2, no. 2, pp. 1190–1194, 2012.
+[8] A. Mehta and R. Kapoor, “Automatic timetable generation using graph-based approach,” International Journal of Computer Applications, vol. 140, no. 5, pp. 21–25, 2016.
+[9] S. Thakur and S. Kasana, “A comparative study of algorithms used in timetable generation,” International Journal of Computer Science and Information Technologies, vol. 6, no. 3, pp. 2880–2884, 2015.
+[10] G. V. S. Babu and M. R. K. Krishna, “Web-based automatic timetable generation system,” International Journal of Computer Science and Network Security, vol. 9, no. 8, pp. 94–99, 2009.
+ 
